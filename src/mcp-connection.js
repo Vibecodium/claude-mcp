@@ -246,9 +246,8 @@ export class MCPConnection {
       params: {
         protocolVersion: "2024-11-05",
         capabilities: {
-          roots: {
-            listChanged: true
-          },
+          // roots capability removed - client cannot respond to roots/list requests
+          // which causes connection timeout with filesystem MCP server
           sampling: {}
         },
         clientInfo: {
